@@ -1,2 +1,4 @@
 dataset/
 model/blood profile/yolov7/
+model/blood profile/runs/
+model/blood profile/wandb/
