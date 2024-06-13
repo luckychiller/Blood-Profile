@@ -2,3 +2,42 @@ dataset/
 model/blood profile/yolov7/
 model/blood profile/runs/
 model/blood profile/wandb/
+
+web app/blood_profile/target/
+web app/blood_profile/.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+web app/blood_profile/.idea/modules.xml
+web app/blood_profile/.idea/jarRepositories.xml
+web app/blood_profile/.idea/compiler.xml
+web app/blood_profile/.idea/libraries/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
