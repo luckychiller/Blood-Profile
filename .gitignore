@@ -2,6 +2,7 @@ dataset/
 model/blood profile/yolov7/
 model/blood profile/runs/
 model/blood profile/wandb/
+api/traced_model.pt
 
 web app/blood_profile/target/
 web app/blood_profile/.mvn/wrapper/maven-wrapper.jar
