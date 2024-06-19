@@ -49,7 +49,7 @@
                             <div class="banner_img"><img src="images/bloodBarnner.jpg"></div>
                         </div>
                     </div>
-                    <form action="HelloServlet" method="get" enctype="multipart/form-data">
+                    <form action="HelloServlet" method="post" enctype="multipart/form-data">
                         <input type="file" name="image" required>
                         <input type="submit" name="submit" >
                     </form>

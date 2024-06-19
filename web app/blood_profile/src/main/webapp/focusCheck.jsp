@@ -171,7 +171,7 @@
 
   function sendResults(time, errors) {
     fetch('/HelloServlet', {
-      method: 'POST',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       },

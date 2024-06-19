@@ -32,7 +32,7 @@ import org.json.JSONObject;
 import java.util.Base64;
 
 public class HelloServlet extends HttpServlet {
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("application/pdf");
 
         Part filePart = request.getPart("image");
@@ -237,7 +237,7 @@ public class HelloServlet extends HttpServlet {
         }
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response){
+    public void doGet(HttpServletRequest request, HttpServletResponse response){
 
     }
 }
