@@ -74,14 +74,14 @@ This project focuses on automating the detection and classification of blood cel
 
    3. Upload a blood smear image and receive the analysis report.
 
-Future Work
+### Future Work
 
     Expand the dataset for better model training.
     Address class imbalance issues.
     Optimize hyperparameters for improved performance.
     Integrate the system with clinical workflows for real-world application.
 
-Contributions
+### Contributions
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
