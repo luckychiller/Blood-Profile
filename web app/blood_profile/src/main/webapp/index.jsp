@@ -51,6 +51,7 @@
                     </div>
                     <form action="HelloServlet" method="post" enctype="multipart/form-data">
                         <input type="file" name="image" required>
+                        <input type="text" name="id" placeholder="Patient ID" required>
                         <input type="submit" name="submit" >
                     </form>
                 </div>

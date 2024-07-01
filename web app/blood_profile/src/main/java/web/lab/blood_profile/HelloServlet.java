@@ -36,6 +36,7 @@ public class HelloServlet extends HttpServlet {
         response.setContentType("application/pdf");
 
         Part filePart = request.getPart("image");
+        String patientID=request.getParameter("id");
         InputStream fileContent = filePart.getInputStream();
 
         // Step 1: Send image to the API for processing
@@ -69,7 +70,7 @@ public class HelloServlet extends HttpServlet {
         }
 
         // Step 2: Add the original image, processed image, and details to the PDF
-        ByteArrayOutputStream pdfOutputStream = createPdfWithImageAndText(fileContent, processedImageStream, details);
+        ByteArrayOutputStream pdfOutputStream = createPdfWithImageAndText(fileContent, processedImageStream, details,patientID);
 
         response.setHeader("Content-Disposition", "attachment; filename=\"diagnostic_results.pdf\"");
         OutputStream outputStream = response.getOutputStream();
@@ -96,7 +97,7 @@ public class HelloServlet extends HttpServlet {
         }
     }
 
-    private ByteArrayOutputStream createPdfWithImageAndText(InputStream imageBefore, InputStream imageAfter, TestDetails details) throws IOException {
+    private ByteArrayOutputStream createPdfWithImageAndText(InputStream imageBefore, InputStream imageAfter, TestDetails details, String PatientID) throws IOException {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
         try (PdfDocument pdfDoc = new PdfDocument(new PdfWriter(outputStream))) {
@@ -125,6 +126,14 @@ public class HelloServlet extends HttpServlet {
                     .setTextAlignment(TextAlignment.LEFT)
                     .setFontSize(12);
             doc.add(dateTime);
+
+            //ID
+            Paragraph identity = new Paragraph("Patient ID: " + PatientID + "\n")
+                    .setTextAlignment(TextAlignment.LEFT)
+                    .setFontSize(12);
+            doc.add(identity);
+
+
 
             doc.add(new Paragraph("\n"));
 
