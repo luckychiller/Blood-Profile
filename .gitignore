@@ -1,7 +1,7 @@
 dataset/
 model/blood profile/yolov7/
 model/blood profile/runs/
-model/blood profile/wandb/
+#model/blood profile/wandb/
 api/traced_model.pt
 model/blood profile/traced_model.pt
 
