@@ -1,24 +1,47 @@
-In clinical medical diagnosis, automatic detection
-and classification of blood cells has a great demand. Traditional
-methods like hematology analyzer or manual count are laborious,
-takes a lot of time and depends on the accuracy of analysts’
-knowledge and expertise. An improved version of YOLOv7 is
-provided in this paper for detecting and classifying blood cells
-automatically. First, from among the large number of detection
-classes, in this version they are reduced down to three blood
-cells classes in the modified YOLOv7 model. In addition, some
-unnecessary layers have been removed from the model to develop
-a robust detection system capable of identifying various blood
-cells with high accuracy. To ensure accessibility and ease of
-use, we designed a user-friendly website interface that allows
-users to upload a single blood slide image and receive the results
-in under ten seconds. The detection results are generated in a
-comprehensive PDF report, facilitating immediate and effective
-analysis by healthcare professionals. This automation not only
-streamlines the diagnostic process but also significantly reduces
-the time and effort required, ultimately contributing to improved
-patient care and medical outcomes. The model working on the
-dataset, for 20 epochs, provides the output that detects three
-different types of blood cells, with an accuracy of 78%. Moreover,
-the fast detection and high accuracy have opened the way
-for computer-aid diagnostic systems in the future.
+# Automated Blood Cell Detection and Classification Using YOLOv7
+
+## Overview
+This project focuses on automating the detection and classification of blood cells using an improved version of the YOLOv7 model. The goal is to enhance clinical diagnostics by providing a fast, accurate, and user-friendly system for analyzing blood smear images.
+
+## Features
+- **Detection Classes:** Reduced to three main blood cell types: Platelets, Red Blood Cells (RBCs), and White Blood Cells (WBCs).
+- **Model Architecture:** Improved YOLOv7 with modifications for robustness and high accuracy.
+- **User Interface:** Web-based interface for uploading blood smear images and receiving analysis reports in PDF format.
+- **Performance:** High Mean Average Precision (mAP) and fast processing time (under 10 seconds per image).
+
+## Methodology
+### Model Architecture
+- **Backbone:** CSPDarknet53 for feature extraction.
+- **Neck:** Combines Feature Pyramid Network (FPN) and Path Aggregation Network (PAN) for multi-scale feature representation.
+- **Head:** Predicts bounding boxes, class probabilities, and objectness scores.
+
+### Dataset
+- **Source:** Publicly available dataset.
+- **Content:** Blood smear images annotated with bounding boxes and class labels.
+- **Preprocessing:** Data augmentation, normalization, and batching using custom data loaders.
+
+### Training
+- **Initial Weights:** Pre-trained YOLOv7 weights.
+- **Hyperparameters:**
+  - Batch Size: 4
+  - Epochs: 100
+  - Learning Rate: 0.01
+  - Weight Decay: 0.0005
+- **Environment:** CUDA (NVIDIA GeForce MX250), PyTorch 2.3.1+cu118.
+
+## Results
+- **Metrics:** Precision, Recall, F1-Score, and Confusion Matrix.
+- **Performance:** High accuracy in detecting and classifying WBCs, with some areas for improvement in RBC and Platelet detection.
+
+## Usage
+### Prerequisites
+- Python 3.8 or higher
+- PyTorch 2.3.1 or higher
+- CUDA-compatible GPU (optional but recommended)
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/blood-cell-detection.git
+   cd blood-cell-detection
+
