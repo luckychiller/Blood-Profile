@@ -24,7 +24,7 @@ This project focuses on automating the detection and classification of blood cel
 - **Initial Weights:** Pre-trained YOLOv7 weights.
 - **Hyperparameters:**
   - Batch Size: 4
-  - Epochs: 100
+  - Epochs: 20
   - Learning Rate: 0.01
   - Weight Decay: 0.0005
 - **Environment:** CUDA (NVIDIA GeForce MX250), PyTorch 2.3.1+cu118.
@@ -44,4 +44,46 @@ This project focuses on automating the detection and classification of blood cel
    ```bash
    git clone https://github.com/yourusername/blood-cell-detection.git
    cd blood-cell-detection
+
+2. Install the required packages:
+
+   ```bash
+    pip install -r requirements.txt
+
+### Running the Model
+
+ 1.   Prepare the dataset:
+        Download the dataset from the provided link.
+        Place the images and annotation files in the dataset directory.
+
+ 2.   Train the model:
+       ```bash
+        python train.py --data dataset.yaml --cfg yolov7.yaml --weights yolov7.pt --epochs 100
+
+ 3.   Test the model:
+       ```bash
+        python test.py --data dataset.yaml --weights best.pt
+
+### Web Interface
+
+  1. Start the web server:
+       ```bash
+        python app.py
+       
+   2. Open your browser and navigate to http://localhost:5000.
+
+   3. Upload a blood smear image and receive the analysis report.
+
+Future Work
+
+    Expand the dataset for better model training.
+    Address class imbalance issues.
+    Optimize hyperparameters for improved performance.
+    Integrate the system with clinical workflows for real-world application.
+
+Contributions
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+
 
