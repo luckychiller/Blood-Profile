@@ -9,8 +9,8 @@ web app/blood_profile/target/
 web app/blood_profile/.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-web app/blood_profile/src/main/webapp/css/
-web app/blood_profile/src/main/webapp/js/
+#web app/blood_profile/src/main/webapp/css/
+#web app/blood_profile/src/main/webapp/js/
 
 ### IntelliJ IDEA ###
 web app/blood_profile/.idea/modules.xml
